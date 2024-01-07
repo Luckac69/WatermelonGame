@@ -13,15 +13,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.y = 100
-	if (position.x < 300):
+	position.y = -300
+	if (position.x < -300):
+		position.x = -300
+	if(position.x > 300):
 		position.x = 300
-	if(position.x > 800):
-		position.x = 800
 
 func get_input():
 	var direction = Input.get_axis("Left","Right") 
-	if (Input.get_action_strength("Fruit")):
+	if (Input.is_action_just_pressed("Fruit")):
 		create_fruit()
 	position.x += direction * 600 * get_process_delta_time()
 

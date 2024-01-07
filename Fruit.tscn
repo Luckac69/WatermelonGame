@@ -10,7 +10,10 @@ radius = 55.0
 script = ExtResource("1_awo80")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.835294, 0.623529, 0.227451, 1)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_1k6f5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_mcpdg")
