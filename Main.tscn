@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt62jiidvllt3"]
+
+[ext_resource type="PackedScene" uid="uid://dt6cdpyqhelp2" path="res://FruitDropper.tscn" id="1_5yuia"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qnt3c"]
+distance = -612.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4dbn5"]
+distance = -6.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1eoy0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_5yuia")]
+position = Vector2(532, 100)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_qnt3c")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(250, 0)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_4dbn5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(850, 0)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_1eoy0")
