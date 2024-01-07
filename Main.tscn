@@ -13,7 +13,7 @@ distance = -6.0
 [node name="Node2D" type="Node2D"]
 
 [node name="Node2D" parent="." instance=ExtResource("1_5yuia")]
-position = Vector2(492, 241)
+position = Vector2(532, 100)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
